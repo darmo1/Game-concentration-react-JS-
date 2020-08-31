@@ -13,17 +13,12 @@ export const Board = ({ cards }) => {
     
     if(score === 8){
       return(
-        <>
+        <div className="center">
           <Win score={score} movement={movement} />
-        </>
+        </div>
       )
     }
-    
-    
-   
-  //console.log(firstCard)
-  console.log(firstCard)
-
+  
   return (
     <>
     <div className="container-emoji" >
@@ -48,9 +43,10 @@ export const Board = ({ cards }) => {
         ))}
     </div>
     <hr />
-
+      <div className="container-score">
       <h1> Movimientos: {movement} </h1>
       <h1> Puntaje: {score} </h1>
+      </div>
     </>
 
   )
